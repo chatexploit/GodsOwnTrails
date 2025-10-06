@@ -53,9 +53,9 @@ Simply open index.html in your browser to view the site.
 
 🤝 Contributors
 
-👩‍💻 Jose Rajesh
 👩‍💻 Alphy Antony
 👩‍💻 Anna Peter
+👩‍💻 Jose Rajesh
 
 Proudly created by Viswadeepthians as part of the Tech Club Project 💚
 
