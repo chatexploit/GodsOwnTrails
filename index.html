@@ -1,0 +1,175 @@
+
+
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>God's Own Trails</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                light: "#e9ffd6",
+                mid: "#bfe6a0",
+                dark: "#89b06a",
+                darker: "#6d8c4e",
+              },
+            },
+            fontFamily: { sans: ["Poppins", "ui-sans-serif"] },
+          },
+        },
+      };
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+  
+  
+    <header class="fixed top-0 left-0 w-full bg-brand-light shadow z-50">
+      <div class="max-w-6xl mx-auto px-4 flex items-center justify-between py-3">
+        <a href="#home" id="logo" class="text-xl font-extrabold text-brand-dark cursor-pointer">GOD'S OWN TRAILS</a>
+        <nav id="desktop-nav" class="hidden md:flex gap-8 font-semibold text-brand-dark">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#destinations" class="nav-link">Destinations</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <button id="nav-toggle" class="md:hidden">
+          <svg class="w-7 h-7 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="nav-menu" class="hidden md:hidden bg-brand-light px-4 pb-4">
+        <a class="block py-2" href="#home">Home</a>
+        <a class="block py-2" href="#about">About</a>
+        <a class="block py-2" href="#destinations">Destinations</a>
+        <a class="block py-2" href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <section id="home" class="pt-24 min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 animated-gradient">
+      <div class="text-center fade-up z-10 relative">
+        <h1 id="hero-text" class="text-4xl md:text-7xl font-extrabold mb-6 typing"></h1>
+        <p class="text-lg mb-8">
+          Handpicked travel guides and packages across Kerala.
+        </p>
+        <a href="#destinations" class="inline-block bg-brand-dark text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform">Explore</a>
+      </div>
+
+      <div class="absolute inset-0 z-0">
+        <div class="shape shape-circle w-10 h-10 top-10 left-5 animate-diagonal-slow" data-depth="0.5"></div>
+        <div class="shape shape-square w-8 h-8 top-1/3 right-8 animate-diagonal-medium" data-depth="0.3"></div>
+        <div class="shape shape-triangle top-1/2 left-1/2 animate-diagonal-fast" data-depth="0.6"></div>
+        <div class="shape shape-circle w-6 h-6 bottom-16 right-16 animate-diagonal-slow" data-depth="0.4"></div>
+        <div class="shape shape-square w-5 h-5 bottom-1/4 left-12 animate-diagonal-medium" data-depth="0.2"></div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center relative">
+      <div class="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">About Us</h2>
+        <p class="text-lg leading-relaxed">
+          Welcome to <strong>GOD'S OWN TRAILS</strong> — a passionate project by
+          three travel-enthusiast students and their mentor. Born from our love
+          for Kerala’s beauty and culture, this site is your trusted companion
+          for discovering the most captivating destinations across “God’s Own
+          Country.”
+        </p>
+      </div>
+      <div class="fade-up">
+        <img src="assets/images/palm.png" alt="Palm illustration" class="w-full h-auto">
+      </div>
+      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 md:w-32 h-2 bg-brand-dark rounded-full"></div>
+    </section>
+
+    <section id="destinations" class="py-20 bg-brand-mid">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12">
+          Popular Destinations
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Repeat destination cards -->
+          <div class="fade-up destination-card">
+            <img src="assets\images\hillstation.jpg" alt="Hill Station" class="object-cover w-full h-48">
+            <div class="destination-overlay">Munnar, Wayanad, Thekkady</div>
+          </div>
+          <div class="fade-up destination-card">
+            <img src="assets\images\beach.jpg" alt="Beach" class="object-cover w-full h-48">
+            <div class="destination-overlay">Kovalam, Varkala, Cherai</div>
+          </div>
+          <div class="fade-up destination-card">
+            <img src="assets\images\Wildlife.jpg" alt="Wildlife" class="object-cover w-full h-48">
+            <div class="destination-overlay">
+              Periyar, Wayanad Wildlife, Chinnar
+            </div>
+          </div>
+          <div class="fade-up destination-card">
+            <img src="assets\images\temple.jpg" alt="Temples" class="object-cover w-full h-48">
+            <div class="destination-overlay">
+              Sree Padmanabhaswamy, Guruvayur, Vadakkunnathan
+            </div>
+          </div>
+          <div class="fade-up destination-card">
+            <img src="assets\images\2.jpg" alt="Spice Garden" class="object-cover w-full h-48">
+            <div class="destination-overlay">
+              Kumarakom Spice, Thekkady Spice, Munnar Farms
+            </div>
+          </div>
+          <div class="fade-up destination-card">
+            <img src="assets\images\houseboat.jpg" alt="Backwater" class="object-cover w-full h-48">
+            <div class="destination-overlay">Athirappilly, Bekal, Vembanad</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">
+        Contact Us
+      </h2>
+      <div class="flex flex-col md:flex-row gap-8">
+        <form class="md:w-2/3 space-y-4 fade-up">
+          <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg">
+          <input type="email" placeholder="Your Email" class="w-full p-3 border rounded-lg">
+          <textarea rows="4" placeholder="Your Message" class="w-full p-3 border rounded-lg"></textarea>
+          <button type="submit" class="w-full bg-brand-dark text-white py-3 rounded font-bold hover:opacity-90">
+            Send
+          </button>
+        </form>
+        <div class="md:w-1/3 bg-brand-darker text-white p-6 rounded-lg flex flex-col justify-center space-y-4 fade-up float-contact">
+          <h3 class="text-2xl font-bold mb-2">Reach Out</h3>
+          <p class="font-semibold">
+            Email:
+            <a href="mailto:godsontrails@example.com" class="underline">godsowntrail@gmail.com</a>
+          </p>
+          <p class="font-semibold">
+            Instagram:
+            <a href="https://instagram.com" target="_blank" class="underline">@GodsOwnTrails</a>
+          </p>
+          <p class="font-semibold">
+            Twitter:
+            <a href="https://twitter.com" target="_blank" class="underline">@GodsOwnTrails</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white text-center py-6">
+      <p>© 2025 GOD'S OWN TRAILS. All Rights Reserved.</p>
+      <p class="mt-2 text-sm">
+        Website created by students Alphy Antony, Anna Peter, and Jose Rajesh
+        under the guidance of Mrs. Susmitha Baby.<br>
+        Part of our educational project to showcase the beauty and culture of
+        Kerala.<br>
+        For educational purposes only.
+      </p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  
+
