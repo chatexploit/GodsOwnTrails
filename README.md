@@ -61,5 +61,5 @@ Proudly created by Viswadeepthians as part of the Tech Club Project 💚
 
 📜 License
 
-This project is open-source and available under the MIT License
+This project is open-source and available under the GNU License
 .
