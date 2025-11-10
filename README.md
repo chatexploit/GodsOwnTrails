@@ -35,7 +35,8 @@ Steps
 
 Clone the repository
 
-git clone https://github.com/YourUsername/GodsOwnTrails.git
+git clone https://github.com/chatexploit/GodsOwnTrails.git
+
 cd GodsOwnTrails
 
 
