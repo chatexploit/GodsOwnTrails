@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>GOD'S OWN TRAILS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-gradient"></div>
+<canvas id="particle-canvas"></canvas>
+
+
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <div style="font-weight: bold; color: var(--primary);">GOD'S OWN TRAILS</div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="places.html" onclick="openPlacesPopup(event)">Places</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Places Popup -->
+<div id="placesPopup" class="places-popup-overlay" onclick="overlayClick(event)">
+  <div class="places-popup" onclick="event.stopPropagation()">
+    <button class="places-popup-close" onclick="closePlacesPopup()" aria-label="Close places menu">✕</button>
+    <h3>Explore Places</h3>
+    <p class="places-popup-sub">Jump directly to your favourite destination.</p>
+    <a href="places.html">All Places</a>
+    <a href="munnar.html">Munnar</a>
+    <a href="alleppey.html">Alleppey</a>
+    <a href="wayanad.html">Wayanad</a>
+    <a href="kochi.html">Kochi</a>
+  </div>
+</div>
+
+<main>
+  <section class="hero fade-up">
+    <div class="bg" style="background-image: url('images/hero.jpg');"></div>
+    <div class="overlay">
+      <h1>Discover the beauty and culture of Kerala</h1>
+      <p style="margin-top: 12px; color: #000000;">
+        Explore tea hills, backwaters, wildlife and coastal heritage across Kerala.
+      </p>
+      <div style="margin-top: 18px;" class="glass-card">
+        <strong>Famous Locations • Photo galleries</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery fade-up">
+    <article class="place-card">
+      <a href="munnar.html">
+        <img src="images/feat_munnar.jpg" alt="Munnar" />
+        <div class="body">
+          <h3>Munnar</h3>
+          <p>
+            Rolling tea gardens that stretch as far as you can see, with cool mountain air touching your
+            face. Munnar has a calm beauty that makes every morning feel fresh and new.
+          </p>
+        </div>
+      </a>
+    </article>
+
+    <article class="place-card">
+      <a href="alleppey.html">
+        <img src="images/feat_alleppey.jpg" alt="Alleppey" />
+        <div class="body">
+          <h3>Alleppey</h3>
+          <p>
+            Backwaters that flow calm and quiet, with houseboats drifting slowly under the coconut trees.
+            A place where time moves gently, perfect for relaxing and just enjoying the moment.
+          </p>
+        </div>
+      </a>
+    </article>
+
+    <article class="place-card">
+      <a href="wayanad.html">
+        <img src="images/feat_wayanad.jpg" alt="Wayanad" />
+        <div class="body">
+          <h3>Wayanad</h3>
+          <p>
+            Green hills covered in mist, forests full of fresh air, and waterfalls hidden between rocks.
+            Nature here feels pure and peaceful, like a quiet escape from busy life.
+          </p>
+        </div>
+      </a>
+    </article>
+
+    <article class="place-card">
+      <a href="kochi.html">
+        <img src="images/feat_kochi.jpg" alt="Kochi" />
+        <div class="body">
+          <h3>Kochi</h3>
+          <p>
+            Sea breeze, old streets, and colorful art everywhere you walk. Kochi is lively yet comfortable,
+            a place where history and modern life meet beautifully.
+          </p>
+        </div>
+      </a>
+    </article>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Send us your feedback, questions, or suggestions.</p>
+    <form class="contact-form" action="https://formspree.io/f/xldopkpg" method="POST">
+      <input type="hidden" name="_subject" value="New message from GOD’S OWN TRAILS website">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <textarea name="message" rows="4" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- QR Section -->
+  <section class="qr-section">
+    <h3>Scan to Visit GOD'S OWN TRAILS</h3>
+    <p>Open this site quickly on your phone by scanning the QR code below.</p>
+    <div class="qr-wrapper">
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://www.viswadeepthi.com&color=0f5a53&bgcolor=e6f6ea"
+        alt="QR Code to open GOD'S OWN TRAILS website"
+      >
+    </div>
+  </section>
+</main>
+
+<footer class="footer-fixed">
+  © 2025 GOD'S OWN TRAILS. All Rights Reserved. — Website created VISWADEEPTHI CMI PUBLIC SCHOOL TECH CLUB
+  students-Alphy Antony, Jose Rajesh and Anna Peter under the guidance of Mrs. Susmita Baby. For educational
+  purposes only.
+</footer>
+
+<script src="script.js"></script>
+<script>
+  function openPlacesPopup(e) {
+    if (e) e.preventDefault();
+    var popup = document.getElementById('placesPopup');
+    if (popup) {
+      popup.classList.add('open');
+    }
+  }
+  function closePlacesPopup() {
+    var popup = document.getElementById('placesPopup');
+    if (popup) {
+      popup.classList.remove('open');
+    }
+  }
+  function overlayClick(event) {
+    if (event.target && event.target.id === 'placesPopup') {
+      closePlacesPopup();
+    }
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closePlacesPopup();
+    }
+  });
+</script>
+</body>
+</html>
